@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Life Stream</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/font-awesome.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/animate.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/style-responsive.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/default.css') }}" id="theme" rel="stylesheet" />
+    <!-- ================== END BASE CSS STYLE ================== -->
+    
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="{{ url_for('static', filename='js/pace.js') }}"></script>
+    <!-- ================== END BASE JS ================== -->
+  </head>
+  <body data-spy="scroll" data-target="#header-navbar" data-offset="51">
+      <!-- begin #page-container -->
+    <div id="page-container">
+        <!-- begin #header -->
+        <div id="header" class="header navbar navbar-transparent navbar-fixed-top">
+            <!-- begin container -->
+            <div class="container">
+                <!-- begin navbar-header -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html" class="navbar-brand">
+                        <span class="brand-logo"></span>
+                        <span class="brand-text">
+                            <span class="text-theme">Life</span> Stream
+                        </span>
+                    </a>
+                </div>
+                <!-- end navbar-header -->
+                <!-- begin navbar-collapse -->
+                <div class="collapse navbar-collapse" id="header-navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#home" data-click="scroll-to-target">HOME</a></li>
+                        <li><a href="#about" data-click="scroll-to-target">ABOUT</a></li>
+                        <li><a href="#problem" data-click="scroll-to-target">PROBLEM</a></li>
+                        <li><a href="#data" data-click="scroll-to-target">DATA</a></li>
+                        <li><a href="#architecture" data-click="scroll-to-target">ARCHITECTURE</a></li>
+                        <li><a href="#visualizations" data-click="scroll-to-target">VISUALIZATIONS</a></li>
+                        <li><a href="#modeling" data-click="scroll-to-target">MODELING</a></li>
+                        <li><a href="https://life-stream-app.herokuapp.com">DASHBOARD</a></li>
+                    </ul>
+                </div>
+                <!-- end navbar-collapse -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #header -->
+        <!-- begin #home -->
+        <div id="home" class="content has-bg home">
+            <!-- begin content-bg -->
+            <div class="content-bg">
+              <img src="{{ url_for('static', filename='images/mpls_sunset1.jpg' ) }}" alt="Home" width="100%"/>
+            </div>
+            <!-- end content-bg -->
+            <!-- begin container -->
+            <div class="container home-content">
+                <h1>Welcome to Life Stream</h1>
+                <h3>Tapping into the Insights from Everyday Life</h3>
+                <h5>
+                    By Rosie Hoyem
+                </h5>
+                <br />
+                <br />
+                <a href="#about" data-click="scroll-to-target" class="btn btn-theme">About Life Stream</a>
+                <br />
+                <br />
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #home -->
+        
+        <!-- begin #about -->
+        <div id="about" class="content has-bg bg-green" data-scrollview="true">
+            <!-- begin content-bg -->
+            <div class="content-bg">
+                <img src="{{ url_for('static', filename='images/client-bg.jpg') }}" alt="Client" />
+            </div>
+            <!-- end content-bg -->
+            <!-- begin container -->
+            <div class="container" data-animation="true" data-animation-type="fadeInUp">
+                <h2 class="content-title">Quantified Self</h2>
+                <!-- begin carousel -->
+                <div class="carousel testimonials slide" data-ride="carousel" id="testimonials">
+                    <!-- begin carousel-inner -->
+                    <div class="carousel-inner text-center">
+                        <!-- begin item -->
+                        <div class="item active">
+                            <blockquote>
+                                <h3><strong>Self-knowledge</strong> through self-tracking with technology.</h3> 
+                            </blockquote>
+                        </div>
+                        <!-- end item -->
+                    </div>
+                    <!-- end carousel-inner -->
+                </div>
+                <!-- end carousel -->
+                <!-- begin row -->
+                <div class="row">
+                    <!-- begin col-12 -->
+                    <div class="col-md-12 col-sm-6">
+                        <div class="about-author">
+                            <div class="quote bg-silver">
+                                <i class="fa fa-quote-left"></i>
+                                <h3><strong>Identity is our mystery.</strong><br />We have no idea who we are – <br />what humans are, and what humans are good for. 
+                                <h3>...</h3> 
+                                <h3>Self-tracking and the quantified self movement are contemporary probes into this mystery, part of our feeble attempt to figure out who we are — as individuals and a collective.</h3> 
+                                <br />
+                                </h3>
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                            <div class="author">
+                                <div class="image">
+                                    <img src="{{ url_for('static', filename='images/kk-thumb.jpg') }}" alt="Kevin Kelly" />
+                                </div>
+                                <div class="info">
+                                    <h4>Kevin Kelly</h4>
+                                    <small>Futureist</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end about-author -->
+                    </div>
+                </div>
+            </div>
+            <!-- end containter -->
+        </div>
+
+        <div id="problem" class="content" data-scrollview="true">
+            <!-- begin container -->
+            <div class="container" data-animation="true" data-animation-type="fadeInDown">
+                <h1 class="content-title">Isolated Streams</h1>
+                <h3 class="content-desc">
+                    What insights can be drawn from our personal data when it is aggregated across services, harmonized, and modeled?<br /><br />
+                    <em>With more intelligence, can we make better decisions?</em>
+                </h3>
+                <!-- begin row -->
+                <div class="row">
+                    <!-- begin col-4 -->
+                    <div class="col-md-4 col-sm-4">
+                        <!-- begin team -->
+                        <div class="team">             
+                            <div class="image" data-animation="true" data-animation-type="flipInX">
+                                <img src="{{ url_for('static', filename='images/data-siloed.jpg') }}" alt="Ryan Teller" />
+                            </div>
+                            <div class="info">
+                                <h3 class="name">Data is Siloed</h3>
+                                <div class="title text-theme">AGGREGATION</div>
+                                <p>There is a separate store for all of the services that we use.</p>
+                            </div>                     
+                        </div>
+                        <!-- end team -->
+                    </div>
+                    <!-- end col-4 -->
+                    <!-- begin col-4 -->
+                    <div class="col-md-4 col-sm-4">
+                        <!-- begin team -->
+                        <div class="team">             
+                            <div class="image" data-animation="true" data-animation-type="flipInX">
+                                <img src="{{ url_for('static', filename='images/data-puzzel.png') }}" alt="Jonny Cash" />
+                            </div>
+                            <div class="info">
+                                <h3 class="name">Data is in Different Formats</h3>
+                                <div class="title text-theme">HARMONIZATION</div>
+                                <p>Even when our data is accessible, it is in different formats making analysis difficult.</p>
+                            </div>                     
+                        </div>
+                        <!-- end team -->
+                    </div>
+                    <!-- end col-4 -->
+                    <!-- begin col-4 -->
+                    <div class="col-md-4 col-sm-4">
+                        <!-- begin team -->
+                        <div class="team">             
+                            <div class="image" data-animation="true" data-animation-type="flipInX">
+                                <img src="{{ url_for('static', filename='images/context-data.jpg') }}" alt="Mia Donovan" />
+                            </div>
+                            <div class="info">
+                                <h3 class="name">Data Lacks Context</h3>
+                                <div class="title text-theme">CONTEXTUALIZATION</div>
+                                <p>Insights could be enhanced with more context related to location, climate, and circumstance. </p>
+                            </div>                     
+                        </div>
+                        <!-- end team -->
+                    </div>
+                    <!-- end col-4 -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #about -->
+    
+        <!-- begin #problem -->
+        
+        <!-- end #milestone -->
+        
+        <!-- begin #data -->
+        <div id="data" class="content" data-scrollview="true">
+            <!-- begin container -->
+            <div class="container">
+                <h1 class="content-title">Data</h1>
+                <h3 class="content-desc">
+                    Current and planned data sources incorporated into Life Stream:
+                </h3>
+                <!-- begin row -->
+                <div class="row">
+                    <!-- begin col-4 -->
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service">
+                            <div class="icon bg-theme" data-animation="true" data-animation-type="bounceIn"><img src="{{ url_for('static', filename='images/calendar-80.jpg' ) }}" alt="Home" width="60"/></div>
+                            <div class="info">
+                                <h3 class="title">Activity</h3>
+                                <p class="desc">Duis in lorem placerat, iaculis nisi vitae.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-4 -->
+                    <!-- begin col-4 -->
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service">
+                            <div class="icon bg-theme" data-animation="true" data-animation-type="bounceIn"><img src="{{ url_for('static', filename='images/moves-80.jpg' ) }}" alt="Home" width="60"/></div>
+                            <div class="info">
+                                <h3 class="title">Cardiovascular Health</h3>
+                                <p class="desc">Etiam nulla turpis, gravida et orci ac.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-4 -->
+                    <!-- begin col-4 -->
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service">
+                            <div class="icon bg-theme" data-animation="true" data-animation-type="bounceIn"><img src="{{ url_for('static', filename='images/fitbit-80.jpg' ) }}" alt="Home" width="60"/></div>
+                            <div class="info">
+                                <h3 class="title">Sleep</h3>
+                                <p class="desc">Ut vel laoreet tortor. Donec venenatis ex.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-4 -->
+                </div>
+                <!-- end row -->
+                <!-- begin row -->
+                <div class="row">
+                    <!-- begin col-4 -->
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service">
+                            <div class="icon bg-theme" data-animation="true" data-animation-type="bounceIn"><img src="{{ url_for('static', filename='images/mint-80.jpg' ) }}" alt="Home" width="60"/></div>
+                            <div class="info">
+                                <h3 class="title">Spending Habits</h3>
+                                <p class="desc">Aenean et elementum dui. Aenean massa enim.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-4 -->
+                    <!-- begin col-4 -->
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service">
+                            <div class="icon bg-theme" data-animation="true" data-animation-type="bounceIn"><img src="{{ url_for('static', filename='images/chrome-80.jpg' ) }}" alt="Home" width="60"/></div>
+                            <div class="info">
+                                <h3 class="title">Browsing Habits</h3>
+                                <p class="desc">Quisque gravida metus in sollicitudin feugiat.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-4 -->
+                    <!-- begin col-4 -->
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service">
+                            <div class="icon bg-theme" data-animation="true" data-animation-type="bounceIn"><img src="{{ url_for('static', filename='images/social-80.jpg' ) }}" alt="Home" width="60"/></div>
+                            <div class="info">
+                                <h4 class="title">Social Engagment</h4>
+                                <p class="desc">Integer consectetur, massa id mattis tincidunt.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-4 -->
+                </div>
+                <!-- end row -->
+                <!-- begin row -->
+                <div class="row">
+                    <!-- begin col-4 -->
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service">
+                            <div class="icon bg-theme" data-animation="true" data-animation-type="bounceIn"><img src="{{ url_for('static', filename='images/weather-80.jpg' ) }}" alt="Home" width="60"/></div>
+                            <div class="info">
+                                <h3 class="title">Weather</h3>
+                                <p class="desc">Aenean et elementum dui. Aenean massa enim.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-4 -->
+                    <!-- begin col-4 -->
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service">
+                            <div class="icon bg-theme" data-animation="true" data-animation-type="bounceIn"><img src="{{ url_for('static', filename='images/sunrise-80.jpg' ) }}" alt="Home" width="60"/></div>
+                            <div class="info">
+                                <h3 class="title">Daylight</h3>
+                                <p class="desc">Quisque gravida metus in sollicitudin feugiat.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-4 -->
+                    <!-- begin col-4 -->
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service">
+                            <div class="icon bg-theme" data-animation="true" data-animation-type="bounceIn"><img src="{{ url_for('static', filename='images/moon-80.jpg' ) }}" alt="Home" width="60"/></div>
+                            <div class="info">
+                                <h3 class="title">Moon Cycles</h3>
+                                <p class="desc">Integer consectetur, massa id mattis tincidunt.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-4 -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #data -->      
+        <!-- begin #quote -->
+        <div id="quote" class="content bg-black-darker has-bg" data-scrollview="true">
+            <!-- begin content-bg -->
+            <div class="content-bg">
+                <img src="{{ url_for('static', filename='images/quote-bg.jpg') }}" alt="Quote" />
+            </div>
+            <!-- end content-bg -->
+            <!-- begin container -->
+            <div class="container" data-animation="true" data-animation-type="fadeInLeft">
+                <!-- begin row -->
+                <div class="row">
+                    <!-- begin col-12 -->
+                    <div class="col-md-12 quote">
+                        How we spend our days is, of course,<br /><span>how we spend our life.</span> 
+                        <small>Annie Dillard</small>
+                    </div>
+                    <!-- end col-12 -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #quote -->
+        
+        <!-- beign #architecture -->
+        <div class="content-bg text-center" id="architecture" data-scrollview="true">
+            <img src="{{ url_for('static', filename='images/life_stream_architecture.png') }}" alt="Action" />
+        </div>
+            <!-- begin container -->
+        <div class="content" data-scrollview="true">
+            <div class="container">
+                <!-- begin row -->
+                <div class="row">
+                    <!-- begin col-4 -->
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service">
+                            <div class="icon bg-theme" data-animation="true" data-animation-type="bounceIn"><i class="fa fa-cog"></i></div>
+                            <div class="info">
+                                <h4 class="title">Web Application</h4>
+                                <p class="desc">A Rails web application manages user accounts provides an interactive dashboard interface.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-4 -->
+                    <!-- begin col-4 -->
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service">
+                            <div class="icon bg-theme" data-animation="true" data-animation-type="bounceIn"><i class="fa fa-paint-brush"></i></div>
+                            <div class="info">
+                                <h4 class="title">Process Manager</h4>
+                                <p class="desc">Airflow manages the process of retrieving new data, depositing cleaned data in the warehouse, and sending processed data to the app client. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-4 -->
+                    <!-- begin col-4 -->
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service">
+                            <div class="icon bg-theme" data-animation="true" data-animation-type="bounceIn"><i class="fa fa-file"></i></div>
+                            <div class="info">
+                                <h4 class="title">Data Warehouse</h4>
+                                <p class="desc">Postgres database stores raw data from all of the services.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-4 -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #architecture -->
+        
+        <!-- beign #action-box -->
+        <div id="action-box" class="content has-bg" data-scrollview="true">
+            <!-- begin content-bg -->
+            <div class="content-bg">
+                <img src="{{ url_for('static', filename='images/action-bg.jpg') }}" alt="Action" />
+            </div>
+            <!-- end content-bg -->
+            <!-- begin container -->
+            <div class="container" data-animation="true" data-animation-type="fadeInRight">
+                <!-- begin row -->
+                <div class="row action-box">
+                    <!-- begin col-9 -->
+                    <div class="col-md-9 col-sm-9">
+                        <div class="icon-large text-theme">
+                            <i class="fa fa-binoculars"></i>
+                        </div> 
+                        <h3>CHECK OUT OUR ADMIN THEME!</h3>
+                        <p>
+                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucibus magna eu lacinia eleifend.
+                        </p>
+                    </div>
+                    <!-- end col-9 -->
+                    <!-- begin col-3 -->
+                    <div class="col-md-3 col-sm-3">
+                        <a href="#" class="btn btn-outline btn-block">Live Preview</a>
+                    </div>
+                    <!-- end col-3 -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #action-box -->
+        
+        <!-- begin #visualizations -->
+        <div id="visualizations" class="content" data-scrollview="true">
+            <!-- begin container -->
+            <div class="container" data-animation="true" data-animation-type="fadeInDown">
+                <h2 class="content-title">Visualizing the Data</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-inverse" data-sortable-id="chart-js-1">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Line Chart</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div>
+                                    <canvas id="line-chart" data-render="chart-js"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #work -->
+        
+        <!-- begin #modeling -->
+        <div id="modeling" class="content" data-scrollview="true">
+            <!-- begin container -->
+            <div class="container">
+                <h2 class="content-title">Modeling</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-inverse" data-sortable-id="chart-js-1">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">SARIMA</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div>
+                                <canvas id="line-chart" data-render="chart-js"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class ="row">
+                <div class="col-md-6">
+                    <div class="panel panel-inverse" data-sortable-id="chart-js-2">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Classification</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div>
+                                <canvas id="bar-chart" data-render="chart-js"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-inverse" data-sortable-id="chart-js-2">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Modeling</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div>
+                                <canvas id="bar-chart" data-render="chart-js"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #dashboard -->
+        
+        <!-- begin #footer -->
+        <div id="footer" class="footer">
+            <div class="container">
+                <div class="footer-brand">
+                    <div class="footer-brand-logo"></div>
+                    Life Stream
+                </div>
+                <p>
+                    &copy; Life Stream 2017 <br />
+                    Exploring the mysteries of life. Created by <a href="https://rosiehoyem.herokuapp.com">Rosie Hoyem</a>
+                </p>
+            </div>
+        </div>
+        <!-- end #footer -->
+    </div>
+    <!-- end #page-container -->
+
+    <!-- ================== BEGIN BASE JS ================== -->
+  <script src="{{ url_for('static', filename='js/jquery-1.9.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery-migrate-1.1.0.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.cookie.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/scrollMonitor.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/Chart.bundle') }}"></script>
+  <script src="{{ url_for('static', filename='js/apps.js') }}"></script>
+  <!-- ================== END BASE JS ================== -->
+  
+  <script>    
+    $(document).ready(function() {
+      console.log('ready')
+      handleHomeContentHeight();
+      handleHeaderNavigationState();
+      handlePageContainerShow();
+      handlePaceLoadingPlugins();
+      handlePageScrollContentAnimation();
+      handleHeaderScrollToAction();
+      handleTooltipActivation();
+      handleThemePanelExpand();
+      handleThemePageControl();
+    });
+
+    // white
+    var white = 'rgba(255,255,255,1.0)';
+    var fillBlack = 'rgba(45, 53, 60, 0.6)';
+    var fillBlackLight = 'rgba(45, 53, 60, 0.2)';
+    var strokeBlack = 'rgba(45, 53, 60, 0.8)';
+    var highlightFillBlack = 'rgba(45, 53, 60, 0.8)';
+    var highlightStrokeBlack = 'rgba(45, 53, 60, 1)';
+
+    // blue
+    var fillBlue = 'rgba(52, 143, 226, 0.6)';
+    var fillBlueLight = 'rgba(52, 143, 226, 0.2)';
+    var strokeBlue = 'rgba(52, 143, 226, 0.8)';
+    var highlightFillBlue = 'rgba(52, 143, 226, 0.8)';
+    var highlightStrokeBlue = 'rgba(52, 143, 226, 1)';
+
+    // grey
+    var fillGrey = 'rgba(182, 194, 201, 0.6)';
+    var fillGreyLight = 'rgba(182, 194, 201, 0.2)';
+    var strokeGrey = 'rgba(182, 194, 201, 0.8)';
+    var highlightFillGrey = 'rgba(182, 194, 201, 0.8)';
+    var highlightStrokeGrey = 'rgba(182, 194, 201, 1)';
+
+    // green
+    var fillGreen = 'rgba(0, 172, 172, 0.6)';
+    var fillGreenLight = 'rgba(0, 172, 172, 0.2)';
+    var strokeGreen = 'rgba(0, 172, 172, 0.8)';
+    var highlightFillGreen = 'rgba(0, 172, 172, 0.8)';
+    var highlightStrokeGreen = 'rgba(0, 172, 172, 1)';
+
+    // purple
+    var fillPurple = 'rgba(114, 124, 182, 0.6)';
+    var fillPurpleLight = 'rgba(114, 124, 182, 0.2)';
+    var strokePurple = 'rgba(114, 124, 182, 0.8)';
+    var highlightFillPurple = 'rgba(114, 124, 182, 0.8)';
+    var highlightStrokePurple = 'rgba(114, 124, 182, 1)';
+
+    var randomScalingFactor = function() { 
+        return Math.round(Math.random()*100)
+    };
+
+    var lineChartData = {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'Dataset 1',
+            borderColor: strokeBlue,
+            pointBackgroundColor: strokeBlue,
+            pointRadius: 2,
+            borderWidth: 2,
+            backgroundColor: fillBlueLight,
+            data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+        }, {
+            label: 'Dataset 2',
+            borderColor: strokeBlack,
+            pointBackgroundColor: strokeBlack,
+            pointRadius: 2,
+            borderWidth: 2,
+            backgroundColor: fillBlackLight,
+            data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+        }]
+    };
+
+    var ctx = document.getElementById('line-chart').getContext('2d');
+    var lineChart = new Chart(ctx, {
+        type: 'line',
+        data: lineChartData
+    });
+    </script>
+    </body>
+</html>

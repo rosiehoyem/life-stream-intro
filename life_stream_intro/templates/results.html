@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block body %}
+  <div class="container theme-showcase" role="main">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <h1 class="text-center">Not a Deal.</h1>
+      <p class="text-center">At this moment, your time and resources would be better leveraged learning <strong>Data Science</strong>.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-1 col-md-2"></div>
+    <div class="col-xs-3 col-md-8">
+      <div>
+        <canvas id="barChart" style="width: 80%; height: auto;"></canvas>
+      </div>
+    </div>
+  </div>
+  <script>
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='Chart.bundle') }}"></script>
+  <!-- <script src="{{ url_for('static', filename='figures.js') }}"></script> -->
+  <script>
+  var ctx = document.getElementById("barChart");
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {{ barchart_data|safe }},
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero:true
+          }
+        }]
+      }
+    }
+  });
+  </script>
+{% endblock %}

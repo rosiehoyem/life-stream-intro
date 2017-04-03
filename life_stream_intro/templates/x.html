@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block body %}
+  <div class="container theme-showcase" role="main">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <h1 class="text-center">Deal or No Deal</h1>
+      <p class="text-center">Is this property a good deal?</p>
+    </div>
+    <div class="row">
+      <div class="col-xs-1 col-md-2"></div>
+      <div class="col-xs-3 col-md-8">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Listing Service</label>
+            <select class="form-control" placeholder="URL">
+              <option></option>
+              <option>Realator.com</option>
+              <option>Redfin</option>
+              <option>Trulia</option>
+              <option>Zillow</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Listing URL</label>
+            <input class="form-control" placeholder="URL">
+          </div>
+          <br>
+          <button type="submit" class="btn btn-primary btn-lg pull-right"><a href="{{ url_for('results') }}">Is this a deal?</a></button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='Chart.bundle') }}"></script>
+  <!-- <script src="{{ url_for('static', filename='figures.js') }}"></script> -->
+  <script>
+  </script>
+{% endblock %}
